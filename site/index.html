@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordle Helper</title>
+  <meta name="description" content="Stuck on today's Wordle? Enter your guesses and colors to see which words are still possible.">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Wordle Helper</h1>
+    <p class="tagline">Type your guess, tap each tile to match the colors you got, then press ✓.</p>
+  </header>
+
+  <main>
+    <section class="play" aria-label="Your guesses">
+      <div id="board" class="board"></div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+      <div id="keyboard" class="keyboard" aria-label="Keyboard"></div>
+      <div class="actions">
+        <button id="undo" type="button" class="secondary">Undo last row</button>
+        <button id="reset" type="button" class="secondary">Start over</button>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-heading">
+      <h2 id="results-heading">Possible words</h2>
+      <p id="summary" class="summary">Loading word list…</p>
+      <ol id="suggestions" class="suggestions"></ol>
+      <p class="legend"><span class="badge">likely</span> = on the list of known Wordle answers. Tap a word to try it.</p>
+    </section>
+  </main>
+</body>
+</html>

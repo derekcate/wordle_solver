@@ -1,0 +1,10 @@
+{
+  "name": "wordle-solver",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build_words.js",
+    "start": "node scripts/serve.js",
+    "test": "node --test"
+  }
+}
